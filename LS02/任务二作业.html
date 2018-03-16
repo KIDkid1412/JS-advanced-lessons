@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>1-1-2</title>
+    <title>延迟执行</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        // 第一种写法
+        function alertmes()
+        {
+            var msg = setTimeout("alert('延迟执行3秒钟')",3000);
+            //clearTimeout(msg);  //取消延迟执行 
+        }
+        // 第二种写法
+            //function alertmes()
+            //{
+            //  var timeoutId = setTimeout(function (){
+            //      alert('延迟执行3秒钟');
+            //  },3000);
+            //}
+ 
+
+    </script>
 </head>
 <body>
-	
+    <input type="button" onClick="alertmes()" value="延迟执行" />  <!--给鼠标绑定一个点击事件  当点击鼠标时 执行函数alertmes()的内容-->
 </body>
-	<script type="text/javascript">
-	  function a(arr){
-    var temp=new Array();
-    for(var i in arr){
-        if(temp.indexOf(arr[i])==-1){
-            temp.push(arr[i]);
-        }
-    }
-    return temp;
-}
-var arr1=[1,2,3,2,3,4,5,6];
-console.log(a(arr1));
-	</script>
 </html>
